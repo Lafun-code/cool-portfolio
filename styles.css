@@ -1,0 +1,249 @@
+/* YENİ: Google Fonts'tan VT323 fontunu projeye dahil ediyoruz. */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --primary-color: #00ff41; /* Classic Terminal Green */
+  --background-color: #1a1a1a; /* Dark Gray Background */
+  --container-bg: #0d0d0d; /* Darker Terminal Window */
+  
+  /* İYİLEŞTİRME: Glow rengi artık ana renge bağlı, daha dinamik. */
+  --glow-color: rgba(0, 255, 65, 0.5); 
+  
+  /* YENİ: Soluk metinler için merkezi bir değişken. */
+  --text-secondary-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --- CRT Scanline Effect --- */
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* --- Main Terminal Window --- */
+.terminal {
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--container-bg);
+  border: 2px solid var(--primary-color);
+  padding: 25px;
+  box-shadow: 0 0 15px var(--glow-color);
+  animation: fadeIn 1s ease-in;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- Language Switcher --- */
+.lang-switcher {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 1.1em;
+}
+.lang-switcher a {
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 2px 4px;
+}
+.lang-switcher a.active {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+/* --- Header & Cursor --- */
+header h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px var(--glow-color);
+  margin-right: 15px;
+}
+.cursor {
+  display: inline-block;
+  width: 15px;
+  height: 2.5em;
+  background-color: var(--primary-color);
+  animation: blink 1s step-end infinite;
+  vertical-align: bottom;
+  box-shadow: 0 0 5px var(--glow-color);
+}
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+header p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* --- Main Navigation --- */
+.main-nav {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--primary-color);
+}
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style-type: none;
+}
+.main-nav a {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+.main-nav a.nav-active {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: 1px solid var(--primary-color);
+}
+
+section {
+  margin-bottom: 30px;
+}
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-transform: lowercase;
+}
+section h2::before {
+  content: "C:\\> type ";
+  opacity: 0.8;
+}
+
+/* İYİLEŞTİRME: Daha sürdürülebilir bir seçici. 
+   HTML'de ilgili <ul> etiketine class="cmd-list" eklemeyi unutma. */
+.cmd-list li::before {
+  content: "» ";
+  margin-right: 10px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s, text-shadow 0.2s;
+}
+a:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  /* YENİ: Hover efektine parlama ekleyerek temayı güçlendiriyoruz. */
+  text-shadow: 0 0 5px var(--background-color);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  list-style-type: none; /* Liste işaretlerini kaldırır */
+}
+.skills-list li {
+  flex-basis: calc(50% - 10px); /* 10px = (gap / 2) */
+}
+
+.job,
+.project,
+.education-item {
+  margin-bottom: 20px;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 15px;
+}
+.job h3,
+.project h3,
+.education-item h3 {
+  font-size: 1.2em;
+}
+.job p,
+.project p,
+.education-item p {
+  /* İYİLEŞTİRME: Değişken kullanımı ile daha tutarlı. */
+  color: var(--text-secondary-color);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .terminal {
+    padding: 15px;
+  }
+  .lang-switcher {
+    position: static;
+    text-align: right;
+    margin-bottom: 15px;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  .cursor {
+    height: 2em;
+  }
+  .skills-list li {
+    flex-basis: 100%;
+  }
+  .main-nav ul {
+    /* İYİLEŞTİRME: Öğeleri dikeyde daha düzgün hizalar. */
+    flex-direction: column;
+    align-items: center;
+  }
+}
