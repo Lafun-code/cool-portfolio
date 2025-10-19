@@ -4,7 +4,7 @@ This repository contains the source code for Hüsnü Emre Berkay's personal port
 
 The site is designed with the aesthetic of an old computer terminal (DOS command line), featuring green text on a black background. Information is presented as if being displayed by running `type [filename]` commands.
 
-![Site Screenshot](https://imgur.com/a/Rn2O2h0) 
+![Site Screenshot](https://i.imgur.com/56VcNhD.png) 
 
 ## ✨ Features
 
@@ -40,7 +40,7 @@ Bu depo, Hüsnü Emre Berkay'ın [hemreberkay.com.tr](https://hemreberkay.com.tr
 
 Site, siyah arka plan üzerine yeşil metinlerin kullanıldığı eski bir bilgisayar terminali (DOS komut satırı) arayüzü şeklinde tasarlanmıştır. Bilgiler, `type [dosya_adı]` komutları çalıştırılıyormuş gibi sunulmaktadır.
 
-![Site Ekran Görüntüsü](https://imgur.com/fQB2kzB) 
+![Site Ekran Görüntüsü](https://i.imgur.com/fQB2kzB.png) 
 
 ## ✨ Özellikler
 
