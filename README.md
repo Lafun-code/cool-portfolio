@@ -1,6 +1,6 @@
 # H. Emre Berkay's Retro Terminal Portfolio
 
-This repository contains the source code for Hüsnü Emre Berkay's personal portfolio website, live at [hemreberkay.com.tr](https://hemreberkay.com.tr/).
+This repository contains the source code for Hüsnü Emre Berkay's personal portfolio website, live at [hemreberkay.com.tr](https://hemreberkay.com.tr/)
 
 The site is designed with the aesthetic of an old computer terminal (DOS command line), featuring green text on a black background. Information is presented as if being displayed by running `type [filename]` commands.
 
