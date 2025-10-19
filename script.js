@@ -22,13 +22,11 @@ const translations = {
     educationTitle: "education.log",
     schoolName: "Mehmet Akif Ersoy University",
     degree: "Computer Programming",
-    // DÜZELTME: Tarih tutarlı hale getirildi.
     educationDate: "2024 - Present",
     projectsTitle: "projects.dir",
     project1Title: 'Game "Development"',
     project1Desc:
       "Memory analysis and real-time modification developed with C++.",
-    // YENİ: Eksik proje başlıkları eklendi.
     project2Title: "Discord Bot",
     project2Desc:
       "An interactive music bot developed with JS for user engagement.",
@@ -67,7 +65,6 @@ const translations = {
     project1Title: 'Oyun "Geliştirme"',
     project1Desc:
       "C++ ile geliştirilmiş memory analizi ve gerçek zamanlı degiştirme.",
-    // YENİ: Eksik proje başlıkları eklendi.
     project2Title: "Discord Botu",
     project2Desc: "JS ile geliştirilmiş kullanıcı interaktifli bir müzik botu.",
     project3Title: "Youtube-indirici",
@@ -112,10 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const browserLang = navigator.language.split("-")[0];
   const defaultLang = savedLang || (browserLang === "tr" ? "tr" : "en");
   changeLanguage(defaultLang);
-  
-  // İYİLEŞTİRME: Event listener'lar buraya taşındı.
   document.getElementById("lang-en").addEventListener("click", (e) => {
-    e.preventDefault(); // Sayfanın en üste atlamasını engeller.
+    e.preventDefault();
     changeLanguage("en");
   });
 
