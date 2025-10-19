@@ -1,15 +1,10 @@
-/* YENİ: Google Fonts'tan VT323 fontunu projeye dahil ediyoruz. */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
   --primary-color: #00ff41; /* Classic Terminal Green */
   --background-color: #1a1a1a; /* Dark Gray Background */
   --container-bg: #0d0d0d; /* Darker Terminal Window */
-  
-  /* İYİLEŞTİRME: Glow rengi artık ana renge bağlı, daha dinamik. */
   --glow-color: rgba(0, 255, 65, 0.5); 
-  
-  /* YENİ: Soluk metinler için merkezi bir değişken. */
   --text-secondary-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -29,7 +24,7 @@ body {
   background-color: var(--background-color);
   color: var(--primary-color);
   font-family: "VT323", monospace;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   display: flex;
   justify-content: center;
@@ -170,8 +165,6 @@ section h2::before {
   opacity: 0.8;
 }
 
-/* İYİLEŞTİRME: Daha sürdürülebilir bir seçici. 
-   HTML'de ilgili <ul> etiketine class="cmd-list" eklemeyi unutma. */
 .cmd-list li::before {
   content: "» ";
   margin-right: 10px;
@@ -186,7 +179,6 @@ a {
 a:hover {
   background-color: var(--primary-color);
   color: var(--background-color);
-  /* YENİ: Hover efektine parlama ekleyerek temayı güçlendiriyoruz. */
   text-shadow: 0 0 5px var(--background-color);
 }
 
@@ -194,7 +186,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px;
-  list-style-type: none; /* Liste işaretlerini kaldırır */
+  list-style-type: none;
 }
 .skills-list li {
   flex-basis: calc(50% - 10px); /* 10px = (gap / 2) */
@@ -215,13 +207,12 @@ a:hover {
 .job p,
 .project p,
 .education-item p {
-  /* İYİLEŞTİRME: Değişken kullanımı ile daha tutarlı. */
   color: var(--text-secondary-color);
 }
 
 @media (max-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px;
   }
   .terminal {
@@ -242,7 +233,6 @@ a:hover {
     flex-basis: 100%;
   }
   .main-nav ul {
-    /* İYİLEŞTİRME: Öğeleri dikeyde daha düzgün hizalar. */
     flex-direction: column;
     align-items: center;
   }
