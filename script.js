@@ -35,6 +35,8 @@ const translations = {
     project3Title: "Youtube-downloader",
     project3Desc:
     "A powerful, Python-based desktop application for downloading YouTube videos in HD, SD, or MP3 format. Includes an intuitive graphical interface built with PyQt5 and seamless integration with yt-dlp.",
+    project4Title: "Source Code of This Site",
+    project4Desc: "The site is designed with the aesthetic of an old computer terminal (DOS command line), featuring green text on a black background. Information about the developer, such as About, Skills, Experience, Education, Projects, and Contact, is presented as if being displayed by running type [filename] commands.",
     contactTitle: "contact.bat",
   },
   tr: {
@@ -70,6 +72,8 @@ const translations = {
     project2Desc: "JS ile geliştirilmiş kullanıcı interaktifli bir müzik botu.",
     project3Title: "Youtube-indirici",
     project3Desc: "HD, SD veya MP3 formatında YouTube videoları indirmek için geliştirilmiş güçlü, Python tabanlı bir masaüstü uygulaması. PyQt5 ile oluşturulmuş sezgisel bir grafik arayüz ve yt-dlp ile sorunsuz entegrasyon içerir.",
+    project4Title: "Bu Sitenin Kaynak Kodu",
+    project4Desc: "Site, siyah arka plan üzerine yeşil metinlerin kullanıldığı eski bir bilgisayar terminali (DOS komut satırı) arayüzü şeklinde tasarlanmıştır. Geliştiricinin Hakkında, Yetenekler, Deneyim, Eğitim, Projeler ve İletişim bilgileri, type [dosya_adı] komutları çalıştırılıyormuş gibi sunulmaktadır.",
     contactTitle: "iletisim.bat",
   },
 };
